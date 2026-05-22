@@ -1,0 +1,24 @@
+project:
+  name: forecast_portus_mcvalnera
+
+site:
+  name: Bahia de Palma
+  lat: 39.55
+  lon: 2.63
+
+forecast:
+  horizon_h: 120
+  step_h: 3
+  mirrors: [aws, azure, ecmwf]
+
+model:
+  k_ib: 0.93
+  alpha: 0.90
+  a_u: 0.0
+  a_v: 0.00035
+
+paths:
+  astro_csv: data/raw/astro/astro_CAMINO_A_2026_2050_CeroREDMAR.csv
+  grib_dir: data/raw/ecmwf_grib
+  processed_dir: data/processed
+  figures_dir: outputs/figures
